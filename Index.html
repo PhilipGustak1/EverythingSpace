@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>EverythingSpace</title>
+
+    <script>
+        function toggleContent(id) {
+            var box = document.getElementById(id);
+
+            if (!box) return;
+
+            if (box.style.display === "block") {
+                box.style.display = "none";
+            } else {
+                box.style.display = "block";
+            }
+        }
+    </script>
+<div>
+  
+ <div onclick="toggleContent('skylabBox')">Skylab</div>
+<div id="skylabBox" style="display:none;">
+
+  <div onclick="toggleContent('missionsBox')">Missions</div>
+<div id="missionsBox" style="display:none;">
+   Skylab consisted of 4 missions. 
+  
+  <div onclick="toggleContent('missionsBox')">Fold Up</div>
+</div>
+  
+  <div onclick="toggleContent('skylabBox')">Fold Up</div>
+</div>
+
+<div>
+</body>
+</html>
