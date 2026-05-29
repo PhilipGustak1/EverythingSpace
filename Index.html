@@ -7,10 +7,13 @@
             var box = document.getElementById(id);
             if (!box) return;
 
-            if (box.style.display === "block") {
-                box.style.display = "none";
-            } else {
+            // Reliable toggle using computed style fallback
+            var isHidden = window.getComputedStyle(box).display === "none";
+
+            if (isHidden) {
                 box.style.display = "block";
+            } else {
+                box.style.display = "none";
             }
         }
     </script>
