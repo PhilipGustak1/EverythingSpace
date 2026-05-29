@@ -5,13 +5,14 @@
     <script>
         function toggleContent(id) {
             var box = document.getElementById(id);
-
             if (!box) return;
 
-            if (box.style.display === "block") {
-                box.style.display = "none";
-            } else {
+            var current = window.getComputedStyle(box).display;
+
+            if (current === "none") {
                 box.style.display = "block";
+            } else {
+                box.style.display = "none";
             }
         }
     </script>
