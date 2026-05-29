@@ -3,76 +3,78 @@
     <title>EverythingSpace</title>
 
     <style>
-        .box { display: none; margin-left: 15px; }
-        .clickable { cursor: pointer; color: blue; margin: 5px 0; }
+        .box {
+            display: none;
+            margin-left: 15px;
+        }
+
+        .clickable {
+            cursor: pointer;
+            color: blue;
+            margin: 6px 0;
+        }
     </style>
 
     <script>
-        function toggleContent(id, event) {
-            if (event) event.stopPropagation();
-
+        function toggleContent(id) {
             const box = document.getElementById(id);
             if (!box) return;
 
-            const isHidden = getComputedStyle(box).display === "none";
-            box.style.display = isHidden ? "block" : "none";
+            // ONLY rely on inline style (stable + predictable)
+            if (box.style.display === "block") {
+                box.style.display = "none";
+            } else {
+                box.style.display = "block";
+            }
         }
     </script>
 </head>
 
 <body>
 
-<div class="clickable" onclick="toggleContent('skylabBox', event)">
-    Skylab
-</div>
+<div class="clickable" onclick="toggleContent('skylabBox')">Skylab</div>
 
 <div id="skylabBox" class="box">
 
-    <div class="clickable" onclick="toggleContent('generaloverviewBox', event)">
+    <div class="clickable" onclick="toggleContent('generaloverviewBox')">
         General Overview
     </div>
 
     <div id="generaloverviewBox" class="box">
-        Skylab was a space station which operated in LEO and had 4 total missions.
-        Skylab-1 was the launch mission and Skylab-2 through 4 were crewed missions.
-        It orbited at ~434 km by 441.9 km and spent 6.1 years in space.
-        It had a pressurized volume of 351.6 cubic meters and was occupied by 9 people total.
-        It was NASA’s first space station after the Apollo program.
-
-        <div class="clickable" onclick="toggleContent('generaloverviewBox', event)">
+        Skylab was a space station in LEO and had 3 crewed missions (Skylab 2–4).
+        It orbited Earth at ~434–442 km and was NASA’s first space station.
+        
+        <div class="clickable" onclick="toggleContent('generaloverviewBox')">
             Fold Up
         </div>
     </div>
 
-    <div class="clickable" onclick="toggleContent('structureBox', event)">
+    <div class="clickable" onclick="toggleContent('structureBox')">
         Structure
     </div>
 
     <div id="structureBox" class="box">
-        Skylab consisted of the Apollo Telescope Mount (ATM), Multiple Docking Adaptor (MDA),
-        Airlock Module (AM), and Orbital Workshop (OW). It was primarily aluminium.
-        Dimensions: 11.1 m tall, 17 m wide, 25.1 m long.
+        Skylab had four main parts: ATM, MDA, AM, and Orbital Workshop.
+        It was mostly aluminium and about 25 meters long.
 
-        <div class="clickable" onclick="toggleContent('structureBox', event)">
+        <div class="clickable" onclick="toggleContent('structureBox')">
             Fold Up
         </div>
     </div>
 
-    <div class="clickable" onclick="toggleContent('launchBox', event)">
+    <div class="clickable" onclick="toggleContent('launchBox')">
         Launch
     </div>
 
     <div id="launchBox" class="box">
-        Skylab launched on 14 May 1973 at 17:30 UTC on a Saturn V from Kennedy Space Center LC-39A.
-        The micrometeoroid shield and one solar panel were damaged during launch.
-        Skylab 2 launched 11 days later after troubleshooting and training.
+        Launched 14 May 1973 on Saturn V from LC-39A. It suffered solar panel damage during launch.
 
-        <div class="clickable" onclick="toggleContent('launchBox', event)">
+        <div class="clickable" onclick="toggleContent('launchBox')">
             Fold Up
         </div>
     </div>
 
-    <div class="clickable" onclick="toggleContent('skylabBox', event)">
+    <div class="clickable" onclick="toggleContent('skylabBox')">
         Fold Up All
     </div>
 
