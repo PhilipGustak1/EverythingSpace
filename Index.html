@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>EverythingSpace</title>
@@ -7,7 +8,6 @@
             var box = document.getElementById(id);
             if (!box) return;
 
-            // Reliable toggle using computed style fallback
             var isHidden = window.getComputedStyle(box).display === "none";
 
             if (isHidden) {
@@ -23,75 +23,96 @@
 
 <div>
 
- <div onclick="toggleContent('skylabBox')">Skylab</div>
+    <div onclick="toggleContent('skylabBox')">Skylab</div>
 
-<div id="skylabBox" style="display:none;">
+    <div id="skylabBox" style="display:none;">
 
-    <div onclick="toggleContent('generaloverviewBox')">General Overview</div>
+        <div onclick="toggleContent('generaloverviewBox')">General Overview</div>
 
-    <div id="generaloverviewBox" style="display:none;">
-    
-Skylab was a space station which operated in LEO and had 4 total missions. Skylab-1 was the mission to launch the mission and 
-Skylab-2 through 4 were crewed missions to perform science and any other work that needed to be done on Skylab. Skylab sat at a 
-orbit of 434km by 441.9km and spent 6.1 years in orbit. Skylab had a pressurized volume of 351.6 cubic meters and was occupied by 9 
-people total. It was operated by NASA as the US' first ever space station after the apollo missions. Skylab crew were delivered via the 
-apollo CSM which carried 3 crew to and from the space station.
+        <div id="generaloverviewBox" style="display:none;">
 
-      <div onclick="toggleContent('generaloverviewBox')">Fold Up</div>
+            Skylab was a space station which operated in LEO and had 4 total missions. Skylab-1 was the mission to launch the mission and
+            Skylab-2 through 4 were crewed missions to perform science and any other work that needed to be done on Skylab. Skylab sat at a
+            orbit of 434km by 441.9km and spent 6.1 years in orbit. Skylab had a pressurized volume of 351.6 cubic meters and was occupied by 9
+            people total. It was operated by NASA as the US' first ever space station after the apollo missions. Skylab crew were delivered via the
+            apollo CSM which carried 3 crew to and from the space station.
+
+            <div onclick="toggleContent('generaloverviewBox')">Fold Up</div>
+        </div>
+
+        <div onclick="toggleContent('structureBox')">Structure</div>
+
+        <div id="structureBox" style="display:none;">
+
+            Skylab was made out of 4 modules called: Apollo Telescope Mount(ATM), Multiple Docking Adaptor(MDA), Airlock Module(AM), and the
+            Orbital Workshop(OW). Skylab was 11.1 meters tall, 17 meters wide and 25.1 meters long with a pressurized volume of 351.6 cubic meters.
+            The Skylab was mostly made out of aluminium.
+
+            <div onclick="toggleContent('structureBox')">Fold Up</div>
+        </div>
+
+        <div onclick="toggleContent('launchBox')">Launch</div>
+
+        <div id="launchBox" style="display:none;">
+
+            Skylab was launched on the 14th of May 1973 at 17:30:00 UTC on a Saturn V rocket out of Kennedy Space Center Launch Complex 39A.
+            The launch of Skylab could be reffered to as Skylab 1. During the launch aerodynamic pressure forces caused a micromeateorite
+            shield, sunshade and solar panel to tear off the station causing another solar panel to get stuck due to debris that got tangled in it.
+            After the launch KSC LC-39A was deactivated to prepare it for the STS/Space Shuttle programme. During the launch of Skylab the Skylab 2
+            crew were on LC-39B for a launch 90 minutes later tho due to complications wsith Skylab the mission was aborted for a launch 2 weeks later
+            for additional training due to the problems and to allow NASA to figure out what went wrong with the station. On the 25th of May Skylab 2 launched
+            11 days after Skylab 1.
+
+            <div onclick="toggleContent('launchBox')">Fold Up</div>
+        </div>
+
+        <div onclick="toggleContent('skylabBox')">Fold Up</div>
     </div>
 
-    <div onclick="toggleContent('structureBox')">Structure</div>
-
-    <div id="structureBox" style="display:none;">
-
-    Skylab was made out of 4 modules called: Apollo Telescope Mount(ATM), Multiple Docking Adaptor(MDA), Airlock Module(AM), and the 
-    Orbital Workshop(OW). Skylab was 11.1 meters tall, 17 meters wide and 25.1 meters long with a pressurized volume of 351.6 cubic meters.
-    The Skylab was mostly made out of aluminium. 
-    
-    <div onclick="toggleContent('structureBox')">Fold Up</div>
-    </div>
-
-    <div onclick="toggleContent('launchBox')">Launch</div>
-
-    <div id="launchBox" style="display:none;">
-
-Skylab was launched on the 14th of May 1973 at 17:30:00 UTC on a Saturn V rocket out of Kennedy Space Center Launch Complex 39A. 
-The launch of Skylab could be reffered to as Skylab 1. During the launch aerodynamic pressure forces caused a micromeateorite 
-shield, sunshade and solar panel to tear off the station causing another solar panel to get stuck due to debris that got tangled in it. 
-After the launch KSC LC-39A was deactivated to prepare it for the STS/Space Shuttle programme. During the launch of Skylab the Skylab 2 
-crew were on LC-39B for a launch 90 minutes later tho due to complications wsith Skylab the mission was aborted for a launch 2 weeks later 
-for additional training due to the problems and to allow NASA to figure out what went wrong with the station. On the 25th of May Skylab 2 launched 
-11 days after Skylab 1.
-
-      <div onclick="toggleContent('launchBox')">Fold Up</div>
-    </div>
-
-  <div onclick="toggleContent('skylabBox')">Fold Up</div>
-</div>
-
-        <div onclick="toggleContent('voskhod')">Voskhod</div>
+    <div onclick="toggleContent('voskhodBox')">Voskhod</div>
 
     <div id="voskhodBox" style="display:none;">
 
-            <div onclick="toggleContent('voskhod1Box')">Voskhod 1</div>
+        <div onclick="toggleContent('voskhod1Box')">Voskhod 1</div>
 
-    <div id="voskhod1Box" style="display:none;">
+        <div id="voskhod1Box" style="display:none;">
 
-        <div onclick="toggleContent('crewBox')">Crew</div>
+            <div onclick="toggleContent('crewBox')">Crew</div>
 
-    <div id="crewBox" style="display:none;">
+            <div id="crewBox" style="display:none;">
 
-        Voskhod 1 was flown by 3 crew: Vladimir Komarov for his first spaceflight as commander, Konstantin Feoktistov for his only 
-        spaceflight as engineer and Boris Yegorov for his only spaceflight and medical doctor.
-        
-        <div onclick="toggleContent('crew')">Fold Up</div>
-</div>
+                Voskhod 1 was flown by 3 crew: Vladimir Komarov for his first spaceflight as commander, Konstantin Feoktistov for his only
+                spaceflight as engineer and Boris Yegorov for his only spaceflight and medical doctor.
 
-        <div onclick="toggleContent('voskhod1')">Fold Up</div>
-</div>
+                <div onclick="toggleContent('crewBox')">Fold Up</div>
+            </div>
 
-      <div onclick="toggleContent('voskhod')">Fold Up</div>
-</div>
+            <div onclick="toggleContent('freeSpace1Box')">Free Space 1</div>
+
+            <div id="freeSpace1Box" style="display:none;">
+
+                <div onclick="toggleContent('freeSpace1Box')">Fold Up</div>
+            </div>
+
+            <div onclick="toggleContent('freeSpace2Box')">Free Space 2</div>
+
+            <div id="freeSpace2Box" style="display:none;">
+
+                <div onclick="toggleContent('freeSpace2Box')">Fold Up</div>
+            </div>
+
+            <div onclick="toggleContent('freeSpace3Box')">Free Space 3</div>
+
+            <div id="freeSpace3Box" style="display:none;">
+
+                <div onclick="toggleContent('freeSpace3Box')">Fold Up</div>
+            </div>
+
+            <div onclick="toggleContent('voskhod1Box')">Fold Up</div>
+        </div>
+
+        <div onclick="toggleContent('voskhodBox')">Fold Up</div>
+    </div>
 
 </div>
 
